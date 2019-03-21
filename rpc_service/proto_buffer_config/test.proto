@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package athena;
+
+
+message TestRequest {
+  string id = 2;
+}
+
+message TestResponse {
+  string res = 1;
+}
+
+service TestService {
+  rpc test (TestRequest) returns (TestResponse);
+}
